@@ -18,12 +18,12 @@ export class TransactionController {
     return this.transactionService.create(userId, createTransactionDto);
   }
 
-  @HttpCode(200)
-  @Post('sms')
-  @UseGuards(Authorize)
-  createTransactionFromSms(@User("userId") userId: string, @Body() smsDto: {message:string}) {
-    return this.transactionService.createTransactionFromSms(userId, smsDto);
-  }
+  // @HttpCode(200)
+  // @Post('sms')
+  // @UseGuards(Authorize)
+  // createTransactionFromSms(@User("userId") userId: string, @Body() smsDto: {message:string}) {
+  //   return this.transactionService.createTransactionFromSms(userId, smsDto);
+  // }
 
   @HttpCode(200)
   @Get()
