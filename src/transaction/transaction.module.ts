@@ -4,7 +4,7 @@ import { TransactionController } from './transaction.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Transaction } from './entities/transaction.entity';
 import { JwtModule } from '@nestjs/jwt';
-import { AccountModule } from 'src/account/account.module';
+import { AccountModule } from '../account/account.module';
 import { TransactionRepository } from './transaction.repository';
 
 @Module({

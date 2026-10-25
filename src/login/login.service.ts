@@ -1,10 +1,10 @@
 import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { LoginRequestDto } from './dto/loginRequest.dto';
 import * as bcrypt from 'bcrypt';
-import { UsersService } from 'src/user/user.service';
-import { RefreshTokenService } from 'src/refresh-token/refresh-token.service';
+import { UsersService } from '../user/user.service';
+import { RefreshTokenService } from '../refresh-token/refresh-token.service';
 import { JwtService } from '@nestjs/jwt';
-import { RefreshRefreshTokenDto } from 'src/refresh-token/dto/refresh-refresh-token.dto';
+import { RefreshRefreshTokenDto } from '../refresh-token/dto/refresh-refresh-token.dto';
 
 
 @Injectable()

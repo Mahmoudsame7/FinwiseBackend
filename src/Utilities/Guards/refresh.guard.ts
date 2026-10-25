@@ -3,7 +3,7 @@ import { Injectable, CanActivate, ExecutionContext, UnauthorizedException, BadRe
 import { Reflector } from '@nestjs/core';
 import { Roles } from '../RoleDecorator';
 import { JwtService } from '@nestjs/jwt';
-import { RefreshRefreshTokenDto, RefreshRefreshTokenSchema } from 'src/refresh-token/dto/refresh-refresh-token.dto';
+import { RefreshRefreshTokenDto, RefreshRefreshTokenSchema } from '../../refresh-token/dto/refresh-refresh-token.dto';
 
 
 @Injectable()

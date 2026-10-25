@@ -1,4 +1,4 @@
-import { TransactionPeriod } from "src/transaction/dto/create-transaction.dto";
+import { TransactionPeriod } from "../../transaction/dto/create-transaction.dto";
 
 export function getPeriodDates(period?: TransactionPeriod) {
   if (!period) {

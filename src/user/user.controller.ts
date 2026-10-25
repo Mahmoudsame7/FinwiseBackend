@@ -12,7 +12,7 @@ import {
 
 import { UsersService } from './user.service';
 import { CreateUserDto, createUserSchema, UpdateUserDto } from './dto/create-user.dto';
-import { ValidationPipe } from 'src/Utilities/validation.pipe';
+import { ValidationPipe } from '../Utilities/validation.pipe';
 
 @Controller('users')
 export class UsersController {

@@ -6,8 +6,8 @@ import { UsersController } from './user.controller';
 import { UsersRepository } from './user.repository';
 import { UsersService } from './user.service';
 
-import { RefreshTokenModule } from 'src/refresh-token/refresh-token.module';
-import { AuthModule } from 'src/auth/auth.module';
+import { RefreshTokenModule } from '../refresh-token/refresh-token.module';
+import { AuthModule } from '../auth/auth.module';
 
 @Module({
   imports: [

@@ -1,11 +1,11 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpStatus,ParseIntPipe, UsePipes, UseGuards, UseInterceptors, Inject} from '@nestjs/common';
 import { ProductService } from './product.service';
 import { CreateProductDto, createProductSchema, UpdateProductDto, updateProductSchema } from './dto/create-product.dto';
-// import { HttpExceptionFilter } from 'src/Utilities/HttpExceptionFilter';
 
-import { Roles } from 'src/Utilities/RoleDecorator';
-import { LoggingInterceptor } from 'src/Utilities/LoggingInterceptor';
-import { ValidationPipe } from 'src/Utilities/validation.pipe';
+
+import { Roles } from '../Utilities/RoleDecorator';
+import { LoggingInterceptor } from '../Utilities/LoggingInterceptor';
+import { ValidationPipe } from '../Utilities/validation.pipe';
 
 
 @Controller('product')

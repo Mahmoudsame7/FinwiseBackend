@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Req } from '@nestjs/common';
 import { RefreshTokenService } from './refresh-token.service';
 import { CreateRefreshTokenDto, UpdateRefreshTokenDto } from './dto/create-refresh-token.dto';
-import { Authorize } from 'src/Utilities/Guards/authorize.guard';
+import { Authorize } from '../Utilities/Guards/authorize.guard';
 import { RefreshRefreshTokenDto } from './dto/refresh-refresh-token.dto';
 
 

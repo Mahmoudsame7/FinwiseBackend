@@ -1,8 +1,8 @@
 import { forwardRef, Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateAccountDto, UpdateAccountDto } from './dto/create-account.dto';
-import { UsersService } from 'src/user/user.service';
+import { UsersService } from '../user/user.service';
 import { AccountRepository } from './account.repository';
-import { TransactionRepository } from 'src/transaction/transaction.repository';
+import { TransactionRepository } from '../transaction/transaction.repository';
 
 
 @Injectable()

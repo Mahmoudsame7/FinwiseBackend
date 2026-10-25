@@ -2,7 +2,7 @@ import { forwardRef, Inject, Injectable, NotFoundException } from '@nestjs/commo
 import { CreateTransactionDto, CreateTransactionSchema, GetTransactionDto, GetTransactionSummaryDto, SearchTransactionsDto, TransactionPeriod, UpdateTransactionDto } from './dto/create-transaction.dto';
 import { Transaction, TransactionType } from './entities/transaction.entity';
 import { DataSource } from 'typeorm';
-import { Account } from 'src/account/entities/account.entity';
+import { Account } from '../account/entities/account.entity';
 import { TransactionRepository } from './transaction.repository';
 import { GoogleGenAI, Type } from '@google/genai';
 
@@ -51,7 +51,7 @@ export class TransactionService {
   }
 
 
-
+  
 
 
   findAll(userId:string) {

@@ -1,10 +1,10 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, UseGuards, Req, UsePipes } from '@nestjs/common';
 import { LoginService } from './login.service';
 import { LoginRequestDto, loginSchema } from './dto/loginRequest.dto';
-import { RefreshRefreshTokenDto, RefreshRefreshTokenSchema } from 'src/refresh-token/dto/refresh-refresh-token.dto';
-import { User } from 'src/Utilities/user.decorator';
-import { Refresh } from 'src/Utilities/Guards/refresh.guard';
-import { ValidationPipe } from 'src/Utilities/validation.pipe';
+import { RefreshRefreshTokenDto, RefreshRefreshTokenSchema } from '../refresh-token/dto/refresh-refresh-token.dto';
+import { User } from '../Utilities/user.decorator';
+import { Refresh } from '../Utilities/Guards/refresh.guard';
+import { ValidationPipe } from '../Utilities/validation.pipe';
 
 
 

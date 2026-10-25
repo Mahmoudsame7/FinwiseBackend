@@ -3,7 +3,7 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { Transaction, TransactionType } from "./entities/transaction.entity";
 import { Repository } from "typeorm";
 import { GetTransactionDto, SearchTransactionsDto } from "./dto/create-transaction.dto";
-import { getPeriodDates } from "src/Utilities/Helpers/HelperFunctions";
+import { getPeriodDates } from "../Utilities/Helpers/HelperFunctions";
 
 @Injectable()
 export class TransactionRepository {

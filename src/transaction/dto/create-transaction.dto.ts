@@ -1,6 +1,6 @@
 import z from "zod";
 import { TransactionType } from "../entities/transaction.entity";
-import { CreateAccountSchema } from "src/account/dto/create-account.dto";
+import { CreateAccountSchema } from "../../account/dto/create-account.dto";
 
 export enum TransactionPeriod {
   DAILY = 'daily',

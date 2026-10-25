@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode } from '@nestjs/common';
 import { CategoryService } from './category.service';
 import { CreateCategoryDto, CreateCategorySchema, UpdateCategoryDto } from './dto/create-category.dto';
-import { ValidationPipe } from 'src/Utilities/validation.pipe';
+import { ValidationPipe } from '../Utilities/validation.pipe';
 
 @Controller('category')
 export class CategoryController {

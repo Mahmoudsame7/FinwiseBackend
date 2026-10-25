@@ -3,10 +3,10 @@ import { AccountService } from './account.service';
 import { AccountController } from './account.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Account } from './entities/account.entity';
-import { AuthModule } from 'src/auth/auth.module';
-import { UsersModule } from 'src/user/user.module';
+import { AuthModule } from '../auth/auth.module';
+import { UsersModule } from '../user/user.module';
 import { AccountRepository } from './account.repository';
-import { TransactionModule } from 'src/transaction/transaction.module';
+import { TransactionModule } from '../transaction/transaction.module';
 
 @Module({
   imports: [

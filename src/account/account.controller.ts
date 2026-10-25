@@ -1,9 +1,9 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode, UseGuards, UsePipes } from '@nestjs/common';
 import { AccountService } from './account.service';
 import { CreateAccountDto, CreateAccountSchema, UpdateAccountDto, UpdateAccountSchema } from './dto/create-account.dto';
-import { Authorize } from 'src/Utilities/Guards/authorize.guard';
-import { User } from 'src/Utilities/user.decorator';
-import { ValidationPipe } from 'src/Utilities/validation.pipe';
+import { Authorize } from '../Utilities/Guards/authorize.guard';
+import { User } from '../Utilities/user.decorator';
+import { ValidationPipe } from '../Utilities/validation.pipe';
 
 
 @Controller('account')

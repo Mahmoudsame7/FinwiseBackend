@@ -7,7 +7,7 @@ import * as bcrypt from 'bcrypt';
 import { UsersRepository } from './user.repository';
 import { UpdateUserDto,CreateUserDto } from './dto/create-user.dto';
 import { JwtService } from '@nestjs/jwt';
-import { RefreshTokenService } from 'src/refresh-token/refresh-token.service';
+import { RefreshTokenService } from '../refresh-token/refresh-token.service';
 
 @Injectable()
 export class UsersService {
