@@ -45,6 +45,7 @@ import { CategoryModule } from './category/category.module';
       autoLoadEntities: true,
       synchronize: false,
       ssl: { rejectUnauthorized: false },
+      retryAttempts:1 
   
      
     }),
