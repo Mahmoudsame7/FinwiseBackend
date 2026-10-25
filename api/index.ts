@@ -8,6 +8,9 @@ let ready: Promise<void> | null = null;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
+
+  console.log('DB host:', process.env.DATABASE_URL?.split('@')[1]?.split('/')[0]);
+
   app.enableCors();
   await app.init();
 }
