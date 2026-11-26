@@ -6,11 +6,13 @@ import { Transaction } from './entities/transaction.entity';
 import { JwtModule } from '@nestjs/jwt';
 import { AccountModule } from '../account/account.module';
 import { TransactionRepository } from './transaction.repository';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([Transaction]),
-    JwtModule
+    JwtModule,
+    HttpModule
   ],
   controllers: [TransactionController],
   providers: [TransactionService,TransactionRepository],

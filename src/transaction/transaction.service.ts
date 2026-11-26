@@ -1,17 +1,19 @@
-import { forwardRef, Inject, Injectable, NotFoundException } from '@nestjs/common';
+import { forwardRef, Inject, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { CreateTransactionDto, CreateTransactionSchema, GetTransactionDto, GetTransactionSummaryDto, SearchTransactionsDto, TransactionPeriod, UpdateTransactionDto } from './dto/create-transaction.dto';
 import { Transaction, TransactionType } from './entities/transaction.entity';
 import { DataSource } from 'typeorm';
 import { Account } from '../account/entities/account.entity';
 import { TransactionRepository } from './transaction.repository';
 import { GoogleGenAI, Type } from '@google/genai';
+import { HttpService } from '@nestjs/axios';
+import { firstValueFrom } from 'rxjs';
 
 
 @Injectable()
 export class TransactionService {
 
   constructor(
-    private readonly transactionRepository:TransactionRepository, private readonly dataSource: DataSource) { }
+    private readonly transactionRepository:TransactionRepository, private readonly dataSource: DataSource, private readonly httpService:HttpService) { }
 
   async create(userId: string, dto: CreateTransactionDto) {
     return this.dataSource.transaction(async (manager) => {
@@ -50,8 +52,32 @@ export class TransactionService {
 
   }
 
+  async createTransactionFromSms(userId:string,smsDto: {message:string}){
+    console.log(smsDto.message)
+    try {
+      const response = await firstValueFrom(
+        this.httpService.post(
+          'http://127.0.0.1:8000/parse',
+          {
+            text: smsDto.message,
+          },
+        ),
+      );
 
-  
+      const prediction = response.data;
+
+      console.log(prediction);
+
+      
+
+    } catch (error) {
+      console.error('FastAPI request failed:', error);
+
+      throw new InternalServerErrorException(
+        'Failed to process SMS message',
+      );
+    }
+  }
 
 
   findAll(userId:string) {

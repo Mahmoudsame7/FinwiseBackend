@@ -33,19 +33,19 @@ import { CategoryModule } from './category/category.module';
   ConfigModule.forRoot(),
   TypeOrmModule.forRoot({
       type: 'postgres',
-      // host: 'localhost',
-      // port: 5432,
-      // username: 'postgres',
-      // password: 'M@7moud2025',
-      // database: 'FinwiseBackend',
-      // autoLoadEntities: true,
-      // synchronize: true,
-
-      url: process.env.DATABASE_URL,
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: process.env.DATABASE_PASSWORD,
+      database: 'FinwiseBackend',
       autoLoadEntities: true,
-      synchronize: false,
-      ssl: { rejectUnauthorized: false },
-      retryAttempts:1 
+      synchronize: true,
+
+      // url: process.env.DATABASE_URL,
+      // autoLoadEntities: true,
+      // synchronize: false,
+      // ssl: { rejectUnauthorized: false },
+      // retryAttempts:1 
   
      
     }),
